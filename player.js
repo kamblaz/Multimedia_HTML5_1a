@@ -6,11 +6,9 @@ function choose_video(name) {
     var source = document.createElement('source');
     player.appendChild(source);
     player.play();
-    setTimeout(function() {
-        player.pause();
-        source.setAttribute('src', name);
-        player.load();
-    }, 0);
+    player.pause();
+    source.setAttribute('src', name);
+    player.load();
 }
 
 function start_player() {
