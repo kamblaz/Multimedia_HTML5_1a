@@ -5,10 +5,9 @@ function choose_video(name) {
     player.innerHTML = '';
     var source = document.createElement('source');
     player.appendChild(source);
-    player.play();
-    player.pause();
     source.setAttribute('src', name);
     player.load();
+    play_vid();
 }
 
 function start_player() {
