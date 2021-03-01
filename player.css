@@ -10,13 +10,12 @@ body {
     text-align: center;
     margin: 0 auto;
     padding: 0px;
-    width: 995px;
+    width: 90vw;
 }
 
 #player_wrapper {
     position: relative;
     width: 400px;
-    margin-left: 300px;
 }
 
 #video_player {

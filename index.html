@@ -20,28 +20,16 @@
             </div>
         </div>
     </div>
+    </br>
+    </br>
+    </br>
     <button onclick='choose_video("video/1.mp4");'>1</button>
     <button onclick='choose_video("video/2.mp4");'>2</button>
     <button onclick='choose_video("video/3.mp4");'>3</button>
     <button onclick='choose_video("video/4.mp4");'>4</button>
+    <button onclick='choose_video("video/5.mp4");'>5</button>
 </body>
 <script>
-    function choose_video(name) {
-        var video = document.getElementById('video_player');
-        video.innerHTML = '';
-        var source = document.createElement('source');
-        video.appendChild(source);
-        video.play();
-        setTimeout(function() {
-            video.pause();
-
-            source.setAttribute('src', name);
-
-            video.load();
-            video.play();
-        }, 3000);
-        //document.getElementById('film').setAttribute('src', name);
-    }
 </script>
 
 </html>

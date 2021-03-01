@@ -1,8 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() { startplayer(); }, false);
+document.addEventListener("DOMContentLoaded", function() { start_player(); }, false);
 var player;
 
 function choose_video(name) {
-    document.createElement('source').setAttribute('src', name);
+    player.innerHTML = '';
+    var source = document.createElement('source');
+    player.appendChild(source);
+    player.play();
+    setTimeout(function() {
+        player.pause();
+        source.setAttribute('src', name);
+        player.load();
+    }, 0);
 }
 
 function start_player() {
