@@ -7,7 +7,7 @@
 
 <body>
     <div id="wrapper">
-        <div id='player_wrapper'>ł
+        <div id='player_wrapper'>
             <video id='video_player'>
           <source src='video/1.mp4' type='video/mp4' id='film'>            
         </video>
@@ -27,7 +27,20 @@
 </body>
 <script>
     function choose_video(name) {
-        document.getElementById('film').setAttribute('src', name);
+        var video = document.getElementById('video_player');
+        video.innerHTML = '';
+        var source = document.createElement('source');
+        video.appendChild(source);
+        video.play();
+        setTimeout(function() {
+            video.pause();
+
+            source.setAttribute('src', name);
+
+            video.load();
+            video.play();
+        }, 3000);
+        //document.getElementById('film').setAttribute('src', name);
     }
 </script>
 
