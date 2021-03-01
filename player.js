@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() { startplayer(); }, false);
 var player;
 
-function startplayer() {
+function choose_video(name) {
+    document.createElement('source').setAttribute('src', name);
+}
+
+function start_player() {
     player = document.getElementById('video_player');
     player.controls = false;
 }

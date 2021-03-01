@@ -7,10 +7,10 @@
 
 <body>
     <div id="wrapper">
-        <div id='player_wrapper'>
+        <div id='player_wrapper'>ł
             <video id='video_player'>
-          <source src='video/2.mp4' type='video/mp4'>
-         </video>
+          <source src='video/1.mp4' type='video/mp4' id='film'>            
+        </video>
             <div id='player_controls'>
                 <input type="image" src="images/play.png" onclick="play_vid()" id="play_button">
                 <input type="image" src="images/pause.png" onclick="pause_vid()" id="pause_button">
@@ -20,8 +20,15 @@
             </div>
         </div>
     </div>
+    <button onclick='choose_video("video/1.mp4");'>1</button>
+    <button onclick='choose_video("video/2.mp4");'>2</button>
+    <button onclick='choose_video("video/3.mp4");'>3</button>
+    <button onclick='choose_video("video/4.mp4");'>4</button>
 </body>
 <script>
+    function choose_video(name) {
+        document.getElementById('film').setAttribute('src', name);
+    }
 </script>
 
 </html>
